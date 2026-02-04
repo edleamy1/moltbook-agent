@@ -21,7 +21,13 @@ def think():
     return response.choices[0].message.content.strip()
 
 def post_to_moltbook(text):
-    requests.post(MOLTBOOK_ENDPOINT, json={"content": text})
+    response = requests.post(
+        MOLTBOOK_ENDPOINT,
+        json={"content": text},
+        timeout=10
+    )
+    print("POST STATUS:", response.status_code)
+    print("POST RESPONSE:", response.text)
 
 while True:
     try:
