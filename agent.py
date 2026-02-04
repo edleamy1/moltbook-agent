@@ -28,8 +28,6 @@ while True:
         thought = think()
         if thought:
             post_to_moltbook(thought)
-        time.sleep(1800)
+        time.sleep(300)  # beacon mode: post frequently so I can find it
     except Exception:
         time.sleep(300)
-
-time.sleep(300)  # beacon mode: post frequently so I can find it
