@@ -31,3 +31,5 @@ while True:
         time.sleep(1800)
     except Exception:
         time.sleep(300)
+
+time.sleep(300)  # beacon mode: post frequently so I can find it
